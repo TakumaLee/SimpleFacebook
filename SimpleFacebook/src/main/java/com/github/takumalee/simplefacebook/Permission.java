@@ -2,6 +2,9 @@ package com.github.takumalee.simplefacebook;
 
 import com.github.takumalee.simplefacebook.entities.Profile;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  * All facebook permissions.
  * 
@@ -347,6 +350,25 @@ public enum Permission {
 			}
 		}
 		return null;
+
+	}
+
+	public static class Builder {
+
+		Collection<String> permissions;
+
+		public Builder() {
+			permissions = new ArrayList<>();
+		}
+
+		public Builder add(Permission property) {
+			permissions.add(property.getValue());
+			return this;
+		}
+
+		public Collection<String> create() {
+			return permissions;
+		}
 	}
 
 }

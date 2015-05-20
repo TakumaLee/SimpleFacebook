@@ -14,17 +14,17 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.github.takumalee.simplefacebook.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
         (findViewById(R.id.button_Login)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SimpleFacebook.getInstance().logInWithReadPermissions(this, FBApplication.permissions);
+                SimpleFacebook.getInstance().logInWithReadPermissions(MainActivity.this, FBApplication.getPermissions());
             }
         });
         (findViewById(R.id.button_Logout)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                SimpleFacebook.getInstance().logout();
             }
         });
 
@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(com.github.takumalee.simplefacebook.R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -46,7 +46,7 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == com.github.takumalee.simplefacebook.R.id.action_settings) {
+        if (id == R.id.action_settings) {
             return true;
         }
 
