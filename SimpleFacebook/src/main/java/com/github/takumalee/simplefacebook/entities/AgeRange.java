@@ -3,7 +3,6 @@ package com.github.takumalee.simplefacebook.entities;
 /**
  * Age range (min-max) of the user.
  * 
- * @author sromku
  */
 public class AgeRange {
 

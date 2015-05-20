@@ -9,8 +9,7 @@ import com.github.takumalee.simplefacebook.utils.GraphPath;
 /**
  * Open graph story
  * 
- * @author sromku
- * @see
+ * @author TakumaLee
  */
 public class Story implements Publishable {
 
