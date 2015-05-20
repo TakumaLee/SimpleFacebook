@@ -1,9 +1,12 @@
 package com.github.takumalee.simplefacebook.test;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.github.takumalee.simplefacebook.SimpleFacebook;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +15,19 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.github.takumalee.simplefacebook.R.layout.activity_main);
+        (findViewById(R.id.button_Login)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SimpleFacebook.getInstance().logInWithReadPermissions(this, FBApplication.permissions);
+            }
+        });
+        (findViewById(R.id.button_Logout)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
 
