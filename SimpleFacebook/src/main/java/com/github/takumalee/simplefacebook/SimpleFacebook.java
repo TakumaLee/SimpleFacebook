@@ -46,6 +46,7 @@ public class SimpleFacebook {
 
     public void registerCallback(FacebookCallback<LoginResult> callback) {
         this.facebookCallback = callback;
+        LoginManager.getInstance().registerCallback(callbackManager, this.facebookCallback);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
