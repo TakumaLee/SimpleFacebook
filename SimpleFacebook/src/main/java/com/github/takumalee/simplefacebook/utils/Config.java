@@ -1,4 +1,4 @@
-package com.github.takumalee.simplefacebook;
+package com.github.takumalee.simplefacebook.utils;
 
 /**
  * Created by Nijugon on 2015/6/6.
